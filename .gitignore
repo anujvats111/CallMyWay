@@ -1,0 +1,31 @@
+# Android build artifacts
+.gradle/
+**/build/
+captures/
+local.properties
+
+# Signing files
+*.jks
+*.keystore
+
+# IDE-specific
+.idea/
+*.iml
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Log and temp files
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# APKs and bundles
+*.apk
+*.aab
+
+# Misc
+*.class

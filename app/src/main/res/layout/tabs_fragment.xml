@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="historyClickListener"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="contactsClickListener"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="dialerClickListener"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="chatClickListener"
+            type="android.view.View.OnClickListener" />
+
+        <!-- changes -->
+        <variable
+            name="isPeerClickListener"
+            type="android.view.View.OnClickListener" />
+
+<!--        <variable-->
+<!--            name="moreClickListener"-->
+<!--            type="android.view.View.OnClickListener" />-->
+
+        <variable
+            name="viewModel"
+            type="org.linphone.activities.main.viewmodels.TabsViewModel" />
+    </data>
+
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/motion_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_activity_tabs_fragment_size"
+        app:layoutDescription="@xml/motion_main_activity_tabs_selector">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineLeft"
+            layout_constraintGuide_percent="@{viewModel.leftAnchor, default=0.20}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+<!--        <androidx.constraintlayout.widget.Guideline-->
+<!--            android:id="@+id/guidelineMiddleLeft"-->
+<!--            layout_constraintGuide_percent="@{viewModel.middleLeftAnchor, default=0.20}"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical" />-->
+
+<!--        <androidx.constraintlayout.widget.Guideline-->
+<!--            android:id="@+id/guidelineMiddleRight"-->
+<!--            layout_constraintGuide_percent="@{viewModel.middleRightAnchor, default=0.20}"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical" />-->
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineMiddle"
+            layout_constraintGuide_percent="@{viewModel.middleAnchor, default=0.5}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineRight"
+            layout_constraintGuide_percent="@{viewModel.rightAnchor, default=0.75}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+
+        <ImageView
+            android:id="@+id/history"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@drawable/footer_button"
+            android:contentDescription="@string/content_description_menu_history"
+            android:onClick="@{historyClickListener}"
+            android:padding="15dp"
+            android:src="@drawable/footer_history"
+            app:layout_constraintEnd_toEndOf="@id/guidelineLeft"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <TextView
+            android:id="@+id/history_unread_count"
+            style="@style/unread_count_font"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="25dp"
+            android:background="@{viewModel.missedCallsCount == 0 ? @drawable/hidden_unread_message_count_bg : @drawable/unread_message_count_bg}"
+            android:gravity="center"
+            android:text="@{viewModel.missedCallsCount == 0 ? `` : String.valueOf(viewModel.missedCallsCount)}"
+            android:translationY="@{viewModel.historyMissedCountTranslateY}"
+            app:layout_constraintRight_toLeftOf="@id/guidelineLeft"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RelativeLayout
+            android:id="@+id/contacts"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/footer_button"
+            android:onClick="@{contactsClickListener}"
+            app:layout_constraintEnd_toEndOf="@id/guidelineMiddle"
+            app:layout_constraintStart_toStartOf="@id/guidelineLeft">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/content_description_menu_contacts"
+                android:padding="15dp"
+                android:src="@drawable/footer_contacts" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/dialer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/footer_button"
+            android:onClick="@{dialerClickListener}"
+            app:layout_constraintEnd_toEndOf="@id/guidelineRight"
+            app:layout_constraintStart_toStartOf="@id/guidelineMiddle">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/content_description_menu_dialer"
+                android:padding="15dp"
+                android:src="@drawable/footer_dialer" />
+
+        </RelativeLayout>
+
+
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:id="@+id/chat"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:onClick="@{chatClickListener}"-->
+<!--            app:layout_constraintEnd_toEndOf="@id/guidelineMiddle"-->
+<!--            app:layout_constraintStart_toStartOf="@id/guidelineMiddleRight">-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_centerInParent="true"-->
+<!--                android:background="@drawable/footer_button"-->
+<!--                android:contentDescription="@string/content_description_menu_chat"-->
+<!--                android:padding="15dp"-->
+<!--                android:src="@drawable/footer_chat"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/chat_unread_count"-->
+<!--                style="@style/unread_count_font"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:layout_marginRight="25dp"-->
+<!--                android:background="@{viewModel.unreadMessagesCount == 0 ? @drawable/hidden_unread_message_count_bg : @drawable/unread_message_count_bg}"-->
+<!--                android:gravity="center"-->
+<!--                android:text="@{viewModel.unreadMessagesCount == 0 ? `` : String.valueOf(viewModel.unreadMessagesCount)}"-->
+<!--                android:translationY="@{viewModel.chatUnreadCountTranslateY}"-->
+<!--                app:layout_constraintRight_toRightOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+        <RelativeLayout
+            android:id="@+id/peer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/footer_button"
+            android:onClick="@{isPeerClickListener}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guidelineRight">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="15dp"
+                android:src="@drawable/issmy_peer" />
+
+        </RelativeLayout>
+
+<!--        <RelativeLayout-->
+<!--            android:id="@+id/more"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:background="@drawable/footer_button"-->
+<!--            android:onClick="@{moreClickListener}"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="@id/guidelineRight" >-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_centerInParent="true"-->
+<!--                android:padding="15dp"-->
+<!--                android:src="@drawable/settings_advanced"-->
+<!--                app:tint="@color/white_color" />-->
+
+<!--        </RelativeLayout>-->
+
+
+        <View
+            android:id="@+id/selector"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/tabs_fragment_selector_size"
+            android:background="?attr/accentColor" />
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+
+</layout>

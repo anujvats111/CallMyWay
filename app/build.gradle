@@ -83,10 +83,10 @@ android {
         targetCompatibility = 17
     }
 
-    compileSdkVersion 34
+    compileSdkVersion 35
     defaultConfig {
         minSdkVersion 23
-        targetSdkVersion 34
+        targetSdkVersion 35
         versionCode appVersionCode
         versionName "${project.version}"
         applicationId packageName
@@ -254,7 +254,8 @@ dependencies {
         implementation 'com.google.firebase:firebase-messaging'
     }
 
-    implementation 'org.linphone:linphone-sdk-android:5.4.0-alpha.317+68f431a5'
+//    implementation 'org.linphone:linphone-sdk-android:5.4.0-alpha.317+68f431a5'
+    implementation 'org.linphone:linphone-sdk-android:5.3.8'
 //    implementation 'org.linphone:linphone-sdk-android:5.3.8'
 //    implementation 'org.linphone:linphone-sdk-android:5.3+'
 

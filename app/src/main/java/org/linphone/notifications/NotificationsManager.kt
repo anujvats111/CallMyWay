@@ -693,7 +693,7 @@ class NotificationsManager(private val context: Context) {
                     context.getString(R.string.service_description)
                 }
             )
-            .setSmallIcon(R.mipmap.topbar_service_notification)
+            .setSmallIcon(R.drawable.notification_icon)
             .setCategory(NotificationCompat.CATEGORY_SERVICE)
             .setVisibility(NotificationCompat.VISIBILITY_SECRET)
             .setWhen(System.currentTimeMillis())

@@ -4,10 +4,12 @@ plugins {
     id 'kotlin-kapt'
     id 'org.jlleitschuh.gradle.ktlint' version '11.3.1'
     id 'org.jetbrains.kotlin.android'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
 }
 
-def appVersionName = "1.1.26"
-def appVersionCode = 26
+def appVersionName = "1.1.27"
+def appVersionCode = 27
 
 def packageName = "org.callmyway"
 
@@ -209,6 +211,7 @@ dependencies {
     implementation 'androidx.media:media:1.6.0'
     implementation "androidx.security:security-crypto-ktx:1.1.0-alpha06"
     implementation "androidx.window:window:1.2.0"
+    implementation 'com.google.firebase:firebase-crashlytics:20.0.0'
 
     def emoji_version = "1.4.0"
     implementation "androidx.emoji2:emoji2:$emoji_version"
@@ -255,9 +258,9 @@ dependencies {
     }
 
 //    implementation 'org.linphone:linphone-sdk-android:5.4.0-alpha.317+68f431a5'
-    implementation 'org.linphone:linphone-sdk-android:5.3.8'
 //    implementation 'org.linphone:linphone-sdk-android:5.3.8'
-//    implementation 'org.linphone:linphone-sdk-android:5.3+'
+//    implementation 'org.linphone:linphone-sdk-android:5.3.8'
+    implementation 'org.linphone:linphone-sdk-android:5.3+'
 
     // Only enable leak canary prior to release
     // debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.10'

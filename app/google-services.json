@@ -1,151 +1,45 @@
 {
   "project_info": {
-    "project_number": "875649328045",
-    "project_id": "holvoxconnect-push",
-    "storage_bucket": "holvoxconnect-push.appspot.com"
+    "project_number": "959815926435",
+    "project_id": "callmyway-9bec7",
+    "storage_bucket": "callmyway-9bec7.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:875649328045:android:4c68d6bae80e27ad0bb724",
+        "mobilesdk_app_id": "1:959815926435:android:f5857a81990c449a583516",
         "android_client_info": {
           "package_name": "org.callmyway"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "875649328045-deicrde02q5thd7g6fs2g165kudhp7tn.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCeltXitNSqnUk8ZJn-hr8CiENlKFVqLdI"
+          "current_key": "AIzaSyDZ5q-Gfd4kZOtDX39M1i3LPk8xFooq2qU"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "875649328045-deicrde02q5thd7g6fs2g165kudhp7tn.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "875649328045-808ie2jou1u15jeu77u38ilm5jqjnpub.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "org.callmyway.phone.msgNotificationContent"
-              }
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:875649328045:android:25616e6115620d330bb724",
+        "mobilesdk_app_id": "1:959815926435:android:f80ba8246c02b72d583516",
         "android_client_info": {
           "package_name": "org.callmyway.debug"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "875649328045-deicrde02q5thd7g6fs2g165kudhp7tn.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCeltXitNSqnUk8ZJn-hr8CiENlKFVqLdI"
+          "current_key": "AIzaSyDZ5q-Gfd4kZOtDX39M1i3LPk8xFooq2qU"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "875649328045-deicrde02q5thd7g6fs2g165kudhp7tn.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "875649328045-808ie2jou1u15jeu77u38ilm5jqjnpub.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "org.callmyway.phone.msgNotificationContent"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:875649328045:android:c01dec1c68f5485a0bb724",
-        "android_client_info": {
-          "package_name": "org.callmyway"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "875649328045-deicrde02q5thd7g6fs2g165kudhp7tn.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyCeltXitNSqnUk8ZJn-hr8CiENlKFVqLdI"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "875649328045-deicrde02q5thd7g6fs2g165kudhp7tn.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "875649328045-808ie2jou1u15jeu77u38ilm5jqjnpub.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "org.callmyway.phone.msgNotificationContent"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:875649328045:android:d4a0ea92a3e6a6a00bb724",
-        "android_client_info": {
-          "package_name": "org.callmyway.debug"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "875649328045-deicrde02q5thd7g6fs2g165kudhp7tn.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyCeltXitNSqnUk8ZJn-hr8CiENlKFVqLdI"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "875649328045-deicrde02q5thd7g6fs2g165kudhp7tn.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "875649328045-808ie2jou1u15jeu77u38ilm5jqjnpub.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "org.callmyway.phone.msgNotificationContent"
-              }
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }

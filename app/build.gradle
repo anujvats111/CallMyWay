@@ -8,8 +8,8 @@ plugins {
     id 'com.google.firebase.crashlytics'
 }
 
-def appVersionName = "1.1.27"
-def appVersionCode = 27
+def appVersionName = "1.1.28"
+def appVersionCode = 28
 
 def packageName = "org.callmyway"
 
